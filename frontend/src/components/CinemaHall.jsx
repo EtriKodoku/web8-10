@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../styles/CinemaHall.css';
 
-const ROWS = 6;
+const ROWS = 5; // або 6, залежно від вашого налаштування
 const SEATS_PER_ROW = 8;
 
-function CinemaHall({ bookedSeats = [], onSelect }) {
+function CinemaHall({onSelect, bookedSeats = [] }) {
   const [selectedSeats, setSelectedSeats] = useState([]);
 
   const toggleSeat = (seat) => {
@@ -21,7 +21,6 @@ function CinemaHall({ bookedSeats = [], onSelect }) {
 
   const renderSeats = () => {
     const seats = [];
-
     for (let row = 0; row < ROWS; row++) {
       for (let col = 0; col < SEATS_PER_ROW; col++) {
         const seat = `R${row + 1}S${col + 1}`;
