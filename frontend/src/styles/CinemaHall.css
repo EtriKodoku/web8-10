@@ -3,6 +3,9 @@
     margin-top: 20px;
 }
 
+.text {
+    color: #fff
+}
 .seats-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);

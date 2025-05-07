@@ -44,7 +44,7 @@ function CinemaHall({ bookedSeats = [], onSelect }) {
 
   return (
     <div className="cinema-container">
-      <h2>Оберіть місця</h2>
+      <h2 className='text'>Оберіть місця</h2>
       <div className="seats-grid">
         {renderSeats()}
       </div>

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import CinemaHall from '../components/CinemaHall';
 import movies from '../data/movies';
+import '../styles/CinemaHall.css';
 
 const Booking = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const Booking = () => {
     <div className="booking-page">
       <h1>Бронювання: {movie.title}</h1>
       <CinemaHall bookedSeats={bookedSeats} onSelect={handleSelectSeats} />
-      <div style={{ marginTop: '20px' }}>
+      <div className="text" style={{ marginTop: '20px'}}>
         <h3>Вибрані місця:</h3>
         {selectedSeats.length > 0 ? (
           <ul>
