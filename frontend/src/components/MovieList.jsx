@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MovieCard from './MovieCard';
-import './MovieList.css';
+import '../styles/MovieList.css';
 
 const MovieList = ({ movies }) => {
   const [search, setSearch] = useState("");

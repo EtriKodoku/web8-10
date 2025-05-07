@@ -1,0 +1,38 @@
+.cinema-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.seats-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.seat {
+    padding: 10px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.seat.selected {
+    background-color: #2196f3;
+}
+
+.seat.booked {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+.seats-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
